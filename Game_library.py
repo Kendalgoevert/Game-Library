@@ -2,6 +2,8 @@
 #Kendal Goevert
 #1-27-2020
 
+games = {1:['FPS', 'Halo3', 'Bungee','microsoft','xbox360','2007','10','either','30.00','yes','1/15/2008','This game blows chunks']}
+
 def add_new():
     print("running add_new()")
     
