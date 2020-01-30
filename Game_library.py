@@ -12,7 +12,84 @@ def save():
     data_file.close()    
 
 def add_new():
-    print("running add_new()")
+    new_key = len(games) + 1
+    new_entry = []
+    valid = False
+    while not valid:
+    
+        
+    
+        games[new_key] = new_entry
+        print("running add_new()")
+        title = input("What is the name of the game you would like to add? ")
+        if title in games:
+            print("*** THAT GAME ALREADY EXISTS! ***\n")
+        else:
+            genre = input("   What is the genre? ")
+            new_entry.append(genre)
+            devoloper = input("   Who is the devoloper? ")
+            new_entry.append(devoloper)
+            publisher = input("   Who is the publisher? ")
+            new_entry.append(publisher)
+            platform = input("   What is the genre? ")
+            new_entry.append(platform)
+            year_released = input("   What year was it Released? ")
+            new_entry.append(year_released)
+            your_rating = input("   what is your rating? ") 
+            new_entry.append(your_rating)
+            solo_or_multi = input("   Is it solo or multi? ")
+            new_entry.append(solo_or_multi)
+            price = input("   Who is the devoloper? ")
+            new_entry.append(price)
+            have_you_played = input("   Who is the publisher? ") 
+            new_entry.append(have_you_played)
+            date_bought = input("   What is the date of purchase? ")
+            new_entry.append(date_bought)
+            games[new_key] = [genre, devoloper, publisher]
+            answer = input("Is this correct? ")
+            if answer.lower() in ("yes", "y"):
+                valid = True            
+         
+        
+        
+    
+def edit_record():
+    new_key = len(games) + 1
+    edit_entry = []
+    valid = False
+    while not valid:    
+   
+   
+        title = input("What is the title of the game you would like to edit? ")
+        if title in games:
+            print("*** THAT GAME DOES NOT EXIST! ***\n")
+        else:
+            genre = input("   What is the genre? ")
+            edit_entry.append(genre)
+            devoloper = input("   Who is the devoloper? ")
+            edit_entry.append(devoloper)
+            publisher = input("   Who is the publisher? ")
+            edit_entry.append(publisher)
+            platform = input("   What is the genre? ")
+            edit_entry.append(platform)
+            year_released = input("   What year was it Released? ")
+            edit_entry.append(year_released)
+            your_rating = input("   what is your rating? ") 
+            edit_entry.append(your_rating)
+            solo_or_multi = input("   Is it solo or multi? ")
+            edit_entry.append(solo_or_multi)
+            price = input("   Who is the devoloper? ")
+            edit_entry.append(price)
+            have_you_played = input("   Who is the publisher? ") 
+            edit_entry.append(have_you_played)
+            date_bought = input("   What is the date of purchase? ")
+            edit_entry.append(date_bought)
+            games[new_key] = [genre, devoloper, publisher]
+            answer = input("Is this correct? ")
+            if answer.lower() in ("yes", "y"):
+                valid = True                    
+    
+    
     
 def print_all_games():
     print("running print_all_games()")
@@ -346,6 +423,7 @@ def quit():
     
     
 
+
 keep_going = True
 
 while keep_going:
@@ -354,11 +432,12 @@ while keep_going:
     ---------------------------
     
     MAIN MENU
-    1) Add/Edit Game
+    1) Add Game
     2) Print All Games
     3) Search By Title
     4) Remove a Game
     5) Save Database
+    6) Edit Game
 
     Q) Quit
     
@@ -375,6 +454,8 @@ while keep_going:
         remove_a_game()
     elif choice == "5":
         save_database()
+    elif choice == "6":
+        edit_record()
     elif choice == "Q" or choice == "q":
         quit()
         keep_going = False
